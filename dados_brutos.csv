@@ -1,0 +1,7 @@
+rodada,mecanismo,debito_req_s,latencia_ms
+1,iptables,45210,12.3
+1,ebpf,62100,4.1
+2,iptables,44980,12.5
+2,ebpf,62340,4.2
+3,iptables,45150,12.1
+3,ebpf,61950,4.0
