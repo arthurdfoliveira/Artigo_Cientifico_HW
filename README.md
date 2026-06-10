@@ -33,9 +33,10 @@ Para garantir o rigor metodológico e mitigar o ruído gerado pelo sistema opera
 
 ## 📂 Estrutura do Repositório
 
-* `/` (Raiz): Contém a documentação principal e o arquivo final do artigo.
-* `analise.py`: Script Python estruturado para carregar os dados das amostras, aplicar a distribuição t de Student e validar as hipóteses.
-* `dados_brutos.csv`: Dataset simulado contendo as 35 rodadas sequenciais registradas para ambos os cenários (IPTables e eBPF).
+* `analise.py`: Script Python estruturado para validação estatística.
+* `dados_brutos.csv`: Dataset contendo as 35 rodadas gravadas.
+* `filtro_ebpf.c`: Código-fonte em C do programa eBPF para o gancho TC.
+* `regras_iptables.sh`: Script Bash para injeção das 1.000 regras lineares.
 
 ---
 
@@ -55,8 +56,8 @@ Para garantir o rigor metodológico e mitigar o ruído gerado pelo sistema opera
 Se desejar reproduzir a validação estatística dos dados, certifique-se de ter o Python 3 e a biblioteca `numpy` instalados. Execute no terminal:
 
 ```bash
-# Instalar dependência (caso necessário)
-pip install numpy
+# Instalar as dependências necessárias no ambiente WSL2
+pip install pandas scipy numpy
 
-# Executar o script de análise
+# Executar o script de análise estatística
 python analise.py
