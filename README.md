@@ -60,4 +60,4 @@ Se desejar reproduzir a validação estatística dos dados, certifique-se de ter
 pip install pandas scipy numpy
 
 # Executar o script de análise estatística
-python analise.py
+python analise.py ou python3 analise.py
